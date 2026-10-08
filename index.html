@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever Mimi and Celon ❤️💋</title><style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #ff1744, #ff80ab, #880e4f);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.heart {
+    font-size: 80px;
+    animation: beat 1s infinite;
+}
+
+h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 8px #69002d;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.card {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 22px;
+    border-radius: 22px;
+    margin: 25px 0;
+    box-shadow: 0 8px 25px rgba(80,0,30,0.2);
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #d81b60;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 14px 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#secret, #reason {
+    display: none;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    animation: float 7s linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.18); }
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 { font-size: 29px; }
+    p { font-size: 16px; }
+}
+</style></head><body>
+<div class="container"><div class="heart">❤️</div>
+
+<h1>Forever Mimi and Celon 💋</h1>
+
+<p>Two names, one beautiful story. ❤️</p>
+
+<div class="card">
+    <h2>💌 A Message for Celon</h2>
+
+    <p>
+        Dear Celon,
+    </p>
+
+    <p>
+        You are a special part of Mimi's story.
+        May every day bring you reasons to smile,
+        moments to cherish, and happiness that fills
+        your heart. 🌹
+    </p>
+
+    <p>
+        Some people make ordinary moments feel magical.
+        This little website is a reminder that you are
+        appreciated and deserve beautiful things.
+        ❤️
+    </p>
+
+    <h2>Mimi ❤️ Celon</h2>
+</div>
+
+<button onclick="showSecret()">
+    Open Your Surprise 💋
+</button>
+
+<div id="secret" class="card">
+    <h2>❤️ A Little Secret ❤️</h2>
+
+    <p>
+        Celon, this page was made with love and care.
+        May your smile shine brightly, your dreams grow,
+        and your heart always find reasons to be happy.
+        🥹💕
+    </p>
+
+    <p>Forever Mimi and Celon! 💋🌹</p>
+</div>
+
+<button onclick="showReason()">
+    One More Surprise 🥰
+</button>
+
+<div id="reason" class="card">
+    <h2>✨ A Little Reminder ✨</h2>
+    <p id="reasonText"></p>
+</div>
+
+<footer>
+    <p>Made with ❤️ by Mimi, for Celon 💋</p>
+    <p>💕 A little website filled with love 💕</p>
+</footer>
+
+</div><script>
+function showSecret() {
+    const box = document.getElementById("secret");
+    box.style.display = "block";
+    box.scrollIntoView({behavior: "smooth", block: "center"});
+}
+
+const messages = [
+    "You deserve happiness and beautiful memories. ❤️",
+    "Never forget how special you are. 🌹",
+    "May your dreams become beautiful realities. 💖",
+    "Keep smiling, Celon! 💋",
+    "Every beautiful story begins with a little spark. ✨"
+];
+
+let messageIndex = 0;
+
+function showReason() {
+    document.getElementById("reasonText").textContent =
+        messages[messageIndex];
+
+    messageIndex = (messageIndex + 1) % messages.length;
+
+    const box = document.getElementById("reason");
+    box.style.display = "block";
+    box.scrollIntoView({behavior: "smooth", block: "center"});
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+
+    const hearts = ["❤️", "💕", "💖", "💗", "💋"];
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (16 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+}
+
+setInterval(createHeart, 500);
+</script></body>
+  </html>
