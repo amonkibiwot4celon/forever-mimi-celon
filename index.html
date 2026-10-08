@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forever Mimi and Celon ❤️💋</title><style>
+<title>Celon Loves Mimi ❤️💋</title>
+
+<style>
 * {
     box-sizing: border-box;
 }
@@ -88,81 +91,115 @@ button {
     h1 { font-size: 29px; }
     p { font-size: 16px; }
 }
-</style></head><body>
-<div class="container"><div class="heart">❤️</div>
+</style>
+</head>
 
-<h1>Forever Mimi and Celon 💋</h1>
+<body>
 
-<p>Two names, one beautiful story. ❤️</p>
+<div class="container">
 
-<div class="card">
-    <h2>💌 A Message for Celon</h2>
+    <div class="heart">❤️</div>
 
-    <p>
-        Dear Celon,
-    </p>
+    <h1>Celon Loves Mimi 💋</h1>
 
-    <p>
-        You are a special part of Mimi's story.
-        May every day bring you reasons to smile,
-        moments to cherish, and happiness that fills
-        your heart. 🌹
-    </p>
+    <p>From my heart to yours, Mimi. ❤️🌹</p>
 
-    <p>
-        Some people make ordinary moments feel magical.
-        This little website is a reminder that you are
-        appreciated and deserve beautiful things.
-        ❤️
-    </p>
+    <div class="card">
+        <h2>💌 To My Beautiful Mimi</h2>
 
-    <h2>Mimi ❤️ Celon</h2>
+        <p>My Mimi, 🥹❤️</p>
+
+        <p>
+            Sometimes, words are not enough to explain
+            what someone means to you. Mimi, you are
+            special to me, and I want you to know that
+            you are appreciated more than you may realize.
+        </p>
+
+        <p>
+            Your smile is beautiful, your presence is
+            precious, and thinking about you brings
+            warmth to my heart. If I could give you one
+            thing, I would let you see yourself through
+            my eyes so you could understand how special
+            you are to me. 💖
+        </p>
+
+        <p>
+            I want us to share beautiful memories,
+            laugh together, support each other's dreams,
+            and appreciate the little things that make
+            life beautiful.
+        </p>
+
+        <p>
+            I may not always find the perfect words,
+            but I hope my actions show you that my
+            feelings are genuine. You deserve happiness,
+            kindness, respect, and beautiful memories.
+        </p>
+
+        <h2>Forever Yours, Celon ❤️💋</h2>
+    </div>
+
+    <button onclick="showSecret()">
+        Open My Heart 💌
+    </button>
+
+    <div id="secret" class="card">
+        <h2>A Secret Just for Mimi 💖</h2>
+
+        <p>
+            Mimi, if you are reading this, I want you
+            to remember something: you matter, you are
+            appreciated, and you deserve to smile.
+        </p>
+
+        <p>
+            Thank you for being the wonderful person
+            you are. I hope life gives you countless
+            reasons to be happy. 🥹🌹
+        </p>
+
+        <h2>CELON ❤️ MIMI</h2>
+
+        <div style="font-size:40px">
+            💋❤️🌹💕🥰
+        </div>
+    </div>
+
+    <button onclick="showReason()">
+        One More Surprise 🥰
+    </button>
+
+    <div id="reason" class="card">
+        <h2>A Little Reminder ✨</h2>
+        <p id="reasonText"></p>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by Celon, for Mimi 💋</p>
+        <p>One website, one special message. 🌹</p>
+    </footer>
+
 </div>
 
-<button onclick="showSecret()">
-    Open Your Surprise 💋
-</button>
-
-<div id="secret" class="card">
-    <h2>❤️ A Little Secret ❤️</h2>
-
-    <p>
-        Celon, this page was made with love and care.
-        May your smile shine brightly, your dreams grow,
-        and your heart always find reasons to be happy.
-        🥹💕
-    </p>
-
-    <p>Forever Mimi and Celon! 💋🌹</p>
-</div>
-
-<button onclick="showReason()">
-    One More Surprise 🥰
-</button>
-
-<div id="reason" class="card">
-    <h2>✨ A Little Reminder ✨</h2>
-    <p id="reasonText"></p>
-</div>
-
-<footer>
-    <p>Made with ❤️ by Mimi, for Celon 💋</p>
-    <p>💕 A little website filled with love 💕</p>
-</footer>
-
-</div><script>
+<script>
 function showSecret() {
     const box = document.getElementById("secret");
     box.style.display = "block";
-    box.scrollIntoView({behavior: "smooth", block: "center"});
+    box.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 }
 
 const messages = [
-    "You deserve happiness and beautiful memories. ❤️",
-    "Never forget how special you are. 🌹",
+    "Mimi, never forget how special you are. ❤️",
+    "You deserve happiness and beautiful memories. 🌹",
     "May your dreams become beautiful realities. 💖",
-    "Keep smiling, Celon! 💋",
-    "Every beautiful story begins with a little spark. ✨"
+    "Keep smiling, Mimi! Your smile is precious. 💋",
+    "You deserve love, kindness, and respect. ✨"
 ];
 
 let messageIndex = 0;
@@ -175,7 +212,10 @@ function showReason() {
 
     const box = document.getElementById("reason");
     box.style.display = "block";
-    box.scrollIntoView({behavior: "smooth", block: "center"});
+    box.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 }
 
 function createHeart() {
@@ -183,11 +223,17 @@ function createHeart() {
     heart.className = "floating-heart";
 
     const hearts = ["❤️", "💕", "💖", "💗", "💋"];
-    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.textContent =
+        hearts[Math.floor(Math.random() * hearts.length)];
 
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (16 + Math.random() * 25) + "px";
-    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    heart.style.fontSize =
+        (16 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
 
     document.body.appendChild(heart);
 
@@ -195,5 +241,7 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
-</script></body>
-  </html>
+</script>
+
+</body>
+            </html>
